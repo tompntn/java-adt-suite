@@ -80,6 +80,36 @@ Check if the queue is empty:
 default public boolean isEmpty();
 ```
 
+## Queue
+Two queue implementations are provided: a static circular queue and a dynamic linked queue.
+The associated constructors are:
+``` java
+Queue<E> circluarQueue = new CircularQueue<>();
+```
+``` java
+Queue<E> linkedQueue = new LinkedQueue<>();
+```
+
+Add an element to the back of the queue:
+``` java
+public void enqueue(K item);
+```
+
+Get and remove the element from the front of the queue:
+``` java
+public K dequeue();
+```
+
+Get the element from the front of the queue (without removing it):
+``` java
+public K peek();
+```
+
+Check if the queue is empty:
+``` java
+public boolean isEmpty();
+```
+
 ## Ordered List
 Creating a new list:
 ``` java
