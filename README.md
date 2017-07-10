@@ -2,7 +2,9 @@
 Abstract Data Types (ADT's) included in this package:
 - Binary Search Tree
 - AVL (self-balancing) Tree
+- Queue
 - Priority Queue
+- Stack
 - Ordered List
 
 All the provided implementations have been thoroughly tested and are safe to use in your project (with unit tests coming soon). Interfaces and implementations are provided for each ADT.
@@ -52,6 +54,35 @@ All of the functions implemented by the BST are also implemented by the AVL Tree
 public boolean isBalanced();
 ```
 
+## Queue
+Two queue implementations are provided: a static circular queue and a dynamic linked queue.
+The associated constructors are:
+``` java
+Queue<E> circularQueue = new CircularQueue<>();
+```
+``` java
+Queue<E> linkedQueue = new LinkedQueue<>();
+```
+
+Add an element to the back of the queue:
+``` java
+public void enqueue(K item);
+```
+
+Get and remove the element from the front of the queue:
+``` java
+public K dequeue();
+```
+
+Get the element from the front of the queue (without removing it):
+``` java
+public K peek();
+```
+
+Check if the queue is empty:
+``` java
+public boolean isEmpty();
+```
 
 ## Priority Queue
 Create a new priority queue:
@@ -80,34 +111,24 @@ Check if the queue is empty:
 default public boolean isEmpty();
 ```
 
-## Queue
-Two queue implementations are provided: a static circular queue and a dynamic linked queue.
-The associated constructors are:
+## Stack
+The provided implementation is a static, array-based stack, with a Capacity value which is passed to the constructor:
 ``` java
-Queue<E> circluarQueue = new CircularQueue<>();
+Stack<String> stack = new ArrayBasedStack<>(30);
 ```
-``` java
-Queue<E> linkedQueue = new LinkedQueue<>();
-```
+If no value is passed the capacity defaults to 50.
 
-Add an element to the back of the queue:
+Add an item to the stack:
 ``` java
-public void enqueue(K item);
+public void push(K item);
 ```
-
-Get and remove the element from the front of the queue:
+Return an item from the top of the stack and removes that item:
 ``` java
-public K dequeue();
+public K pop();
 ```
-
-Get the element from the front of the queue (without removing it):
+Return an item from the top of the stack (without removing it):
 ``` java
 public K peek();
-```
-
-Check if the queue is empty:
-``` java
-public boolean isEmpty();
 ```
 
 ## Ordered List
