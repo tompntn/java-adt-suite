@@ -3,6 +3,7 @@ Abstract Data Types (ADT's) included in this package:
 - Binary Search Tree
 - AVL (self-balancing) Tree
 - Priority Queue
+- Ordered List
 
 All the provided implementations have been thoroughly tested and are safe to use in your project (with unit tests coming soon). Interfaces and implementations are provided for each ADT.
 
@@ -38,7 +39,7 @@ Retrieve the item with the specified key:
 public V retrieve(K key);
 ```
 
-### AVL Tree
+## AVL Tree
 An AVL Tree (named after it's Russian inventors) is a self-balancing binary search tree, keeping the time required to access elements logarithmic in the size of the tree. It can be useful if you are performing many more accesses than insertions/deletions.
 
 Create a new AVL Tree:
@@ -53,7 +54,7 @@ public boolean isBalanced();
 
 
 ## Priority Queue
-Creating a new priority queue:
+Create a new priority queue:
 ``` java
 PriorityQueue<E> priorityQueue = new DynamicPriorityQueue<>();
 ```
@@ -77,4 +78,35 @@ public int size();
 Check if the queue is empty:
 ``` java
 default public boolean isEmpty();
+```
+
+## Ordered List
+Creating a new list:
+``` java
+OrderedList<K, V> orderedList = new OrderedLinkedList<>();
+```
+
+Check if the list is empty:
+``` java
+public boolean isEmpty();
+```
+
+Insert an item into the list:
+``` java
+public void put(K key, V val);
+```
+
+Fetch the item with the specified key:
+``` java
+public V get(K key);
+```
+
+Remove the element with the specified search key:
+``` java
+public void remove(K key);
+```
+
+Return the size of the list:
+``` java
+public int size();
 ```
